@@ -1,0 +1,16 @@
+.wpsd-support-document-table {
+    max-width: 48rem;
+}
+
+.wpsd-support-document-table td {
+    border: 1px solid #333;
+}
+
+.wpsd-support-document-table thead {
+    background-color: #333;
+    color: #fff;
+}
+
+.wpsd-support-document-table tr:nth-child(even) {
+    background-color: #DDD;
+}
