@@ -49,5 +49,5 @@ jQuery('.wpsd-document-add-button').on('click', function() {
 jQuery('.wpsd-document-table')
 .children('tbody')
 .sortable({
-
+    cursor: 'move'
 });

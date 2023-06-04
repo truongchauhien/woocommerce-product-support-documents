@@ -38,7 +38,7 @@ function wpsd_display_support_documents_editor($post) {
     echo '<tbody>';
     echo '  <tr class="wpsd-document-template">';
     echo '      <td>';
-    echo '          <span>[=]</span>';
+    echo '          <span class="wpsd-document-drag">↕️</span>';
     echo '      </td>';
     echo '      <td>';
     echo '          <input type="text" value="">';
@@ -47,10 +47,10 @@ function wpsd_display_support_documents_editor($post) {
     echo '          <input type="text" value="">';
     echo '      </td>';
     echo '      <td>';
-    printf('          <button class="wpsd-document-choose-media">%s</button>', esc_html(__('Choose media...', 'woocommerce-product-support-documents')));
+    printf('          <button class="button wpsd-document-choose-media">%s</button>', esc_html(__('Choose media...', 'woocommerce-product-support-documents')));
     echo '      </td>';
     echo '      <td>';
-    printf('          <button class="wpsd-document-delete">%s</button>', esc_html(__('Delete', 'woocommerce-product-support-documents')));
+    printf('          <button class="button wpsd-document-delete">%s</button>', esc_html(__('Delete', 'woocommerce-product-support-documents')));
     echo '      </td>';
     echo '  </tr>';
     if (!empty($meta)) {
@@ -61,7 +61,7 @@ function wpsd_display_support_documents_editor($post) {
 
             echo '  <tr class="wpsd-document">';
             echo '      <td>';
-            echo '          <span>[=]</span>';
+            echo '          <span class="wpsd-document-drag">↕️</span>';
             echo '      </td>';
             echo '      <td>';
             echo "          <input type=\"text\" name=\"wpsd-document-title[]\" value=\"{$title}\">";
@@ -70,17 +70,29 @@ function wpsd_display_support_documents_editor($post) {
             echo "          <input type=\"text\" name=\"wpsd-document-link[]\" value=\"{$link}\">";
             echo '      </td>';
             echo '      <td>';
-            printf('          <button class="wpsd-document-choose-media">%s</button>', esc_html(__('Choose media...', 'woocommerce-product-support-documents')));
+            printf('          <button class="button wpsd-document-choose-media">%s</button>', esc_html(__('Choose media...', 'woocommerce-product-support-documents')));
             echo '      </td>';
             echo '      <td>';
-            printf('          <button class="wpsd-document-delete">%s</button>', esc_html(__('Delete', 'woocommerce-product-support-documents')));
+            printf('          <button class="button wpsd-document-delete">%s</button>', esc_html(__('Delete', 'woocommerce-product-support-documents')));
             echo '      </td>';
             echo '  </tr>';
         }
     }
     echo '</tbody>';
+    echo '<tfoot>';
+    echo '  <td>';
+    echo '  </td>';
+    echo '  <td>';
+    printf('    <button class="button wpsd-document-add-button">%s</button>', __('Add a document', 'woocommerce-product-support-documents'));
+    echo '  </td>';
+    echo '  <td>';
+    echo '  </td>';
+    echo '  <td>';
+    echo '  </td>';
+    echo '  <td>';
+    echo '  </td>';
+    echo '</tfoot>';
     echo '</table>';
-    printf('<button class="wpsd-document-add-button">%s</button>', __('Add a document', 'woocommerce-product-support-documents'));
 }
 
 add_action('save_post', 'wpsd_save_support_documents');

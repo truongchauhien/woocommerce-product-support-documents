@@ -1,3 +1,12 @@
-.wpsd-document-template {
+.wpsd-document-table .wpsd-document-template {
     display: none;
+}
+
+.wpsd-document-table .wpsd-document-drag {
+    cursor: move;
+    font-size: 1.75em;
+}
+
+.wpsd-document-table .wpsd-document td:first-child {
+    width: 2.0em;
 }
