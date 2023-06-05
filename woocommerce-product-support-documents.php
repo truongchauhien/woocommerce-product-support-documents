@@ -113,7 +113,7 @@ function wpsd_save_support_documents($post_id) {
         update_post_meta(
             $post_id,
             'wpsd_support_documents',
-            json_encode($documents)
+            json_encode($documents, JSON_UNESCAPED_UNICODE)
         );
     }
 }
