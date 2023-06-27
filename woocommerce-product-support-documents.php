@@ -1,6 +1,7 @@
 <?php
 /*
  * Plugin Name: WooCommerce Product Support Documents
+ * Plugin URI: https://github.com/truongchauhien/woocommerce-product-support-documents
  * Text Domain: woocommerce-product-support-documents
  * Domain Path: /languages
  */
