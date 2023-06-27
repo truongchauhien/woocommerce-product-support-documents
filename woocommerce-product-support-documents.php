@@ -83,7 +83,7 @@ function wpsd_display_support_documents_editor($post) {
     echo '  <td>';
     echo '  </td>';
     echo '  <td>';
-    printf('    <button class="button wpsd-document-add-button">%s</button>', __('Add a document', 'woocommerce-product-support-documents'));
+    printf('    <button class="button wpsd-document-add-button">%s</button>', esc_html(__('Add a document', 'woocommerce-product-support-documents')));
     echo '  </td>';
     echo '  <td>';
     echo '  </td>';
@@ -113,7 +113,7 @@ function wpsd_save_support_documents($post_id) {
         update_post_meta(
             $post_id,
             'wpsd_support_documents',
-            json_encode($documents, JSON_UNESCAPED_UNICODE)
+            json_encode($documents, JSON_UNESCAPED_UNICODE | JSON_HEX_APOS)
         );
     }
 }
@@ -132,7 +132,7 @@ function wpsd_display_support_document_tab() {
     global $post;
     $meta = get_post_meta($post->ID, 'wpsd_support_documents', true);
     if (!$meta) {
-        echo __('This product has not been added any support document yet.', 'woocommerce-product-support-documents');
+        echo esc_html(__('This product has not been added any support document yet.', 'woocommerce-product-support-documents'));
         return;
     }
     
@@ -140,10 +140,10 @@ function wpsd_display_support_document_tab() {
     echo '    <thead>';
     echo '        <tr>';
     echo '            <th>';
-    echo '                ' . __('Title', 'woocommerce-product-support-documents');
+    echo '                ' . esc_html(__('Title', 'woocommerce-product-support-documents'));
     echo '            </th>';
     echo '            <th>';
-    echo '                ' . __('Link', 'woocommerce-product-support-documents');
+    echo '                ' . esc_html(__('Link', 'woocommerce-product-support-documents'));
     echo '            </th>';
     echo '        </tr>';
     echo '    </thead>';
@@ -151,8 +151,8 @@ function wpsd_display_support_document_tab() {
     $documents = json_decode($meta, true);
     foreach ($documents as $document) {
         $title = esc_html($document['title']);
-        $link_href = esc_html($document['link']);
-        $link_text = esc_html($document['link']);
+        $link_href = esc_attr($document['link']);
+        $link_text = esc_url($document['link']);
 
         echo '        <tr>';
         echo "            <td>{$title}</td>";
