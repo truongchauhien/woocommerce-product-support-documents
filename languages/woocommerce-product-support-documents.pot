@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-06-04T05:49:13+00:00\n"
+"POT-Creation-Date: 2023-06-27T04:48:07+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: woocommerce-product-support-documents\n"
@@ -19,32 +19,34 @@ msgid "WooCommerce Product Support Documents"
 msgstr ""
 
 #: woocommerce-product-support-documents.php:28
-#: woocommerce-product-support-documents.php:112
+#: woocommerce-product-support-documents.php:131
 msgid "Support Documents"
 msgstr ""
 
-#: woocommerce-product-support-documents.php:50
-#: woocommerce-product-support-documents.php:73
-msgid "Choose media..."
-msgstr ""
-
-#: woocommerce-product-support-documents.php:53
-#: woocommerce-product-support-documents.php:76
-msgid "Delete"
-msgstr ""
-
-#: woocommerce-product-support-documents.php:83
-msgid "Add a document"
-msgstr ""
-
-#: woocommerce-product-support-documents.php:123
-msgid "This product has not been added any support document yet."
-msgstr ""
-
-#: woocommerce-product-support-documents.php:131
+#: woocommerce-product-support-documents.php:41
+#: woocommerce-product-support-documents.php:150
 msgid "Title"
 msgstr ""
 
-#: woocommerce-product-support-documents.php:134
+#: woocommerce-product-support-documents.php:42
+#: woocommerce-product-support-documents.php:153
 msgid "Link"
+msgstr ""
+
+#: woocommerce-product-support-documents.php:57
+#: woocommerce-product-support-documents.php:80
+msgid "Choose media..."
+msgstr ""
+
+#: woocommerce-product-support-documents.php:60
+#: woocommerce-product-support-documents.php:83
+msgid "Delete"
+msgstr ""
+
+#: woocommerce-product-support-documents.php:93
+msgid "Add a document"
+msgstr ""
+
+#: woocommerce-product-support-documents.php:142
+msgid "This product has not been added any support document yet."
 msgstr ""
