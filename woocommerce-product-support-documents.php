@@ -35,6 +35,13 @@ function wpsd_display_support_documents_editor($post) {
     $meta = get_post_meta($post->ID, 'wpsd_support_documents', true);
     echo '<input type="hidden" name="wpsd_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
     echo '<table class="wpsd-document-table">';
+    echo '<thead>';
+    echo '  <tr>';
+    echo '      <td></td>';
+    printf('    <td>%s</td>', esc_html(__('Title', 'woocommerce-product-support-documents')));
+    printf('    <td>%s</td>', esc_html(__('Link', 'woocommerce-product-support-documents')));
+    echo '  </tr>';
+    echo '</thead>';
     echo '<tbody>';
     echo '  <tr class="wpsd-document-template">';
     echo '      <td>';
